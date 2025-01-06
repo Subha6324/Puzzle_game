@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/free-photo/fantasy-style-galaxy-background_23-2151114323.jpg?semt=ais_hybrid'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+h1, p {
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for better readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+.planet-tile {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.planet-tile:hover {
+    transform: scale(1.1);
+}
+.planet-tile.correct {
+    border-color: limegreen;
+}
+.planet-tile.incorrect {
+    border-color: red;
+}
+@media (max-width: 600px) {
+    .planet-tile {
+        width: 80px;
+        height: 80px;
+    }
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.popup h2 {
+    color: limegreen;
+}
+
+.popup button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: limegreen;
+}
+
+}
